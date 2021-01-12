@@ -1,0 +1,13 @@
+{
+  "name": "@sedpro/cl-lib",
+  "version": "0.0.1",
+  "private": false,
+  "access": "public",
+  "peerDependencies": {
+    "@angular/common": "^11.0.6",
+    "@angular/core": "^11.0.6"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
