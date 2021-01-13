@@ -1,0 +1,28 @@
+<!--
+    Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+
+    Licensed under CLOUD LINUX LICENSE AGREEMENT
+    http://cloudlinux.com/docs/LICENSE.TXT
+-->
+<div class="cm-navbar">
+    <div class="left-aligned">
+      <div class="cl-logo-container">
+        <ng-template *ngIf="!!logoTemplate" [ngTemplateOutlet]="logoTemplate"></ng-template>
+      </div>
+        <ul class="cm-navbar-menu">
+          <div *ngFor="let template of leftTemplates">
+            <ng-template [ngTemplateOutlet]="template"></ng-template>
+          </div>
+        </ul>
+    </div>
+    <div class="right-aligned">
+        <a class="support-button" href="https://cloudlinux.zendesk.com/hc/en-us/requests/new"
+           target="_blank"
+           mat-button>
+            <i class="support-icon"></i>
+        </a>
+      <div *ngFor="let template of rightTemplates">
+        <ng-template [ngTemplateOutlet]="template"></ng-template>
+      </div>
+    </div>
+</div>

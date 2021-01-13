@@ -1,0 +1,118 @@
+/**
+ * Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+ *
+ * Licensed under CLOUD LINUX LICENSE AGREEMENT
+ * http://cloudlinux.com/docs/LICENSE.TXT
+ */
+@import "../../assets/styles/icons";
+
+.cm-navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 64px;
+    background-color: #1b55c5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 37px;
+
+    &-menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        a {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 11px 13px;
+            font-family: "SF UI Text", sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            border-radius: 2px;
+
+            &.active, &:hover {
+                background-color: #5883d5;
+                transition: background-color 500ms;
+            }
+        }
+    }
+
+    .left-aligned {
+        display: flex;
+        height: 64px;
+    }
+
+    .right-aligned {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &-profile {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 20px;
+    }
+
+    .blue-outline-btn {
+        color: white;
+        border: 2px solid #FFFFFF;
+        border-radius: 2px;
+        margin-left: 9px;
+        background-color: transparent;
+
+        &:hover {
+            background-color: #ffffff;
+            transition: background-color 500ms;
+            color: #1b55c5;
+        }
+    }
+
+    .vertical-divider {
+        margin-right: 10px;
+        height: 34px;
+        opacity: 0.28;
+        border: 1px solid #979797;
+    }
+
+    .server-icon {
+        width: 18px;
+        height: 18px;
+        margin-right: 11px;
+        display: inline-block;
+        .servers-white-icon;
+    }
+
+    .users-icon {
+        height: 18px !important;
+        margin-right: 11px;
+        display: inline-block;
+        .users-white-icon;
+    }
+
+    .alert-icon {
+        height: 18px !important;
+        margin-right: 11px;
+        display: inline-block;
+        .alert-white-icon;
+    }
+
+    .support-button {
+        .support-icon {
+            display: inline-block;
+            .support-icon-white;
+        }
+    }
+}

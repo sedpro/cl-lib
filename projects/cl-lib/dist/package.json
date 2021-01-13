@@ -1,0 +1,21 @@
+{
+  "name": "@sedpro/cl-lib",
+  "version": "0.0.5",
+  "private": false,
+  "access": "public",
+  "peerDependencies": {
+    "@angular/common": "^11.0.6",
+    "@angular/core": "^11.0.6"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "main": "bundles/sedpro-cl-lib.umd.js",
+  "module": "fesm2015/sedpro-cl-lib.js",
+  "es2015": "fesm2015/sedpro-cl-lib.js",
+  "esm2015": "esm2015/sedpro-cl-lib.js",
+  "fesm2015": "fesm2015/sedpro-cl-lib.js",
+  "typings": "sedpro-cl-lib.d.ts",
+  "metadata": "sedpro-cl-lib.metadata.json",
+  "sideEffects": false
+}

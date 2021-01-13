@@ -1,0 +1,140 @@
+/**
+ * Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+ *
+ * Licensed under CLOUD LINUX LICENSE AGREEMENT
+ * http://cloudlinux.com/docs/LICENSE.TXT
+ */
+@import "variables";
+
+.triangle(@color: @gray100, @width: 20px, @height: 10px) {
+    display: flex;
+    align-items: center;
+
+    &:before {
+        content: '';
+        display: block;
+        border-left: @width/2 solid transparent;
+        border-right: @width/2 solid transparent;
+        border-bottom: @height solid @color;
+    }
+}
+
+.triangle-border(@color: @gray100, @fillColor: #fff, @width: 20px, @height: 10px, @strokeWidth: 1px) {
+    .triangle(@color, @width, @height);
+    display: block;
+
+    &:after {
+        @w: @width/2;
+        @h: @height;
+        content: '';
+        display: block;;
+        border-left: @w solid transparent;
+        border-right: @w solid transparent;
+        border-bottom: @h solid @fillColor;
+        margin-top: -(@height - @strokeWidth);
+    }
+}
+
+.collapsed-border-cell(@color) {
+    box-shadow: 1px 0 0 0 @color,
+    0 1px 0 0 @color,
+    1px 1px 0 0 @color, /* Just to fix the corner */ 1px 0 0 0 @color inset,
+    0 1px 0 0 @color inset;
+}
+
+.standart-button() {
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 18px;
+    user-select: none;
+    height: 35px;
+    border-radius: 3px;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.18);
+    font-size: 13px;
+    font-family: "SF UI Text", Arial, Helvetica, sans-serif;
+    border: none;
+    cursor: pointer;
+    //text-transform: uppercase;
+    font-weight: bold;
+    .mat-button-focus-overlay {
+        background-color: @hoverColor;
+    }
+
+    &[disabled] {
+        opacity: 0.5;
+    }
+}
+
+.circle-num() {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    min-width: 23px;
+    padding: 4px;
+    box-sizing: border-box;
+    background-color: @white0;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+    &:before {
+        content: '';
+        padding-top: 100%;
+    }
+}
+
+.right-triangle(@color: @gray100, @size: 15px) {
+    width: @size;
+    height: @size;
+    border: 1px solid @color;
+    backface-visibility: hidden;
+    border-bottom: none;
+    border-right: none;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.hover-item-before {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: @hoverColor;
+    }
+
+    &:hover {
+        &:before {
+            display: block;
+        }
+    }
+}
+
+.hover-item-after {
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: @hoverColor;
+    }
+
+    &:hover {
+        &:after {
+            display: block;
+        }
+    }
+}

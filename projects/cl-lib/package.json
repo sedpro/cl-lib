@@ -1,6 +1,6 @@
 {
   "name": "@sedpro/cl-lib",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "private": false,
   "access": "public",
   "peerDependencies": {
@@ -9,5 +9,14 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/public-api.ts",
+      "cssUrl": "inline"
+    },
+    "assets": [
+      "src/lib/assets/styles/*.less"
+    ]
   }
 }

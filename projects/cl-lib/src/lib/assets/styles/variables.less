@@ -1,0 +1,165 @@
+/**
+ * Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+ *
+ * Licensed under CLOUD LINUX LICENSE AGREEMENT
+ * http://cloudlinux.com/docs/LICENSE.TXT
+ */
+// named colors
+@criticalColor: #ff6f6f;
+@warningColor: #f9814c;
+@normalColor: #319f5d;
+@outlineColor: #a6c8ff;
+@hoverColor: rgba(15, 49, 90, 0.05);
+@invalidColor: fade(@red600, 77%);
+
+// colors by darkness (from 0 to 1000)
+@white0: #fff;
+@black1000: #000;
+@gray40: #f2f2f2;
+@gray44: #f5f5f5;
+@gray50: #f9f9f9;
+@gray55: #f7f8fb;
+@gray57: #eaecf1;
+@gray60: #f8f8f8;
+@gray65: #f9f9fb;
+@gray67: #e5e5e5;
+@gray70: #fcfcfd;
+@gray80: #f0f0f0;
+@gray82: #e8e8e8;
+@gray85: #e3e3e3;
+@gray90: #ebebeb;
+@gray93: #e0e0e0;
+@gray95: #E5E7E7;
+@gray97: #dfdfdf;
+@gray98: #dcdcdc;
+@gray100: #d5d5d5;
+@gray101: #d8d8d8;
+@gray102: #e4e7ec;
+@gray105: #cecece;
+@gray110: #cccccc;
+@gray115: #cecaca;
+@gray118: #b9bfc4;
+@gray120: #b5bbc1;
+@gray150: #a9b3ba;
+@gray160: #b3b3b3;
+@gray170: #A9B7CA;
+@gray180: #a1a6ad;
+@gray200: #ababab;
+@gray220: #a3a3a3;
+@gray240: #969a9f;
+@gray250: #979797;
+@gray270: #919191;
+@gray300: #828282;
+@gray350: #7f7f7f;
+@gray400: #757575;
+@gray410: #737373;
+@gray420: #787878;
+@gray430: #727272;
+@gray450: #6b6b6b;
+@gray460: #656565;
+@gray465: #666666;
+@gray470: #636363;
+@gray480: #565A5C;
+@gray500: #535353;
+@gray600: #4e5665;
+@gray800: #3a3838;
+@gray820: #383838;
+@gray850: #343434;
+@gray900: #333333;
+@gray950: #1d1d1d;
+@blue20: #e3f1fe;
+@blue25: #e2e9eb;
+@blue30: #edf5ff;
+@blue50: #e1ebff;
+@blue60: #dcecf6;
+@blue80: #bfd5ff;
+@blue90: #badeff;
+@blue100: #93ccfa;
+@blue110: #1fb4ee;
+@blue115: #4babfd;
+@blue117: #52a2ff;
+@blue120: #32abfc;
+@blue125: #3db5f1;
+@blue130: #00aaef;
+@blue150: #3197ee;
+@blue170: #3599ee;
+@blue180: #229fff;
+@blue200: #408eff;
+@blue300: #2b98f0;
+@blue320: #0093dc;
+@blue350: #0093dd;
+@blue380: #0091db;
+@blue400: #1886e5;
+@blue420: #277fff;
+@blue430: #2783FF;
+@blue450: #3775ff;
+@blue460: #1d82dc;
+@blue480: #0173FA;
+@blue500: #2F77E0;
+@blue600: #1574ff;
+@blue620: #0d8CE6;
+@blue650: #026aeb;
+@blue660: #265aff;
+@blue670: #106CDF;
+@blue700: #1366E2;
+@blue800: #5463f5;
+@blue850: #005BB8;
+@blue900: #005db4;
+@blue920: #005ab7;
+@blue950: #004f9a;
+@blue970: #29379f;
+@blue990: #0A1D39;
+@orange50: #feecd3;
+@orange80: #fcc9b5;
+@orange150: #FFE086;
+@orange200: #f79238;
+@orange300: #ff9141;
+@orange350: #FF8F00;
+@orange400: #ff8000;
+@orange600: #fa6e5f;
+@red100: #f85757;
+@red120: #ff5757;
+@red150: #ee5151;
+@red170: #e15959;
+@red200: #dd4747;
+@red400: #de3a3a;
+@red450: #ff2020;
+@red600: #d40000;
+@red700: #c32311;
+@green100: #75e9d6;
+@green150: #57C38D;
+@green200: #3fce74;
+@green210: #58ba7b;
+@green230: #31c17c;
+@green250: #31B772;
+@green270: #38ab63;
+@green300: #2daf6e;
+@green350: #48a970;
+@green360: #66a672;
+@green400: #36b029;
+@green450: #2a9e45;
+@green500: #1f9d89;
+@green600: #1d976c;
+@green650: #39925D;
+@green680: #057f42;
+@green700: #467c45;
+
+// sizes
+@headerHeight: 64px;
+@sidebarWidth: 222px;
+@pageContentWidth: 998px;
+@pageContentLeftOffset: 15px;
+@ticketButtonHeight: 46px;
+@ticketButtonBottom: 31px;
+@ticketButtonRight: 37px;
+
+// z-indexes
+@headerZIndex: 101;
+@lockLoaderZIndex: @headerZIndex + 1;
+@loadingBarZIndex: @lockLoaderZIndex + 1;
+
+//adaptive sizes
+@maxPageWidth: (@sidebarWidth + @pageContentLeftOffset + @pageContentWidth);
+@tabletLargeWidth: 968px;
+@tabletMediumWidth: 768px;
+@phoneLargeWidth: 480px;

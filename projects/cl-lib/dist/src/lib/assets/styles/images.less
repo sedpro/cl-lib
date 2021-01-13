@@ -1,0 +1,26 @@
+/**
+ * Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+ *
+ * Licensed under CLOUD LINUX LICENSE AGREEMENT
+ * http://cloudlinux.com/docs/LICENSE.TXT
+ */
+.set-img(@fileName, @w, @h) {
+    @url: '../img/@{fileName}';
+    background: url(@url) center center / 100% 100% no-repeat;
+    width: @w;
+    height: @h;
+}
+
+.standard-img(@fileName, @w, @h, @retina2xName) when not(@retina2xName = undefined) {
+    @media only screen and (-o-min-device-pixel-ratio: 5/4), only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min--moz-device-pixel-ratio: 1.25), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 1.25dppx) {
+        .set-img(@retina2xName, @w, @h);
+    }
+}
+
+.standard-img(@fileName, @w, @h, @retina2xName: undefined) {
+    .set-img(@fileName, @w, @h);
+}
+
+//.phone24-img(@w: 68px, @h: 55px) {
+//    .standard-img('phone-24.png', @w, @h, 'phone-24@2x.png');
+//}
