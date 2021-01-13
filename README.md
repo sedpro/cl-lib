@@ -9,9 +9,6 @@
 
 Details: https://angular.io/guide/creating-libraries
 
-## Npm linking:
+## Npm link
 
-* Link the library: `cd dist/cl-lib && npm link`
-* Go to directory where library is used and link it to those project: ``
-
-https://dev.to/erinbush/npm-linking-and-unlinking-2h1g
+https://www.npmjs.com/package/@sedpro/cl-lib
