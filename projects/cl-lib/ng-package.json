@@ -6,7 +6,6 @@
     "cssUrl": "inline"
   },
   "assets": [
-    "src/lib/assets/styles/*.less",
-    "src/lib/assets/svg/*.svg"
+    "src/lib/assets/**/*"
   ]
 }
