@@ -1,7 +1,7 @@
 import { Directive, Input, TemplateRef } from '@angular/core';
 
 @Directive({
-    selector: '[cl-template]',
+    selector: '[clTemplate]',
 })
 export class ClTemplateDirective {
     @Input() set i360Template(val) {
