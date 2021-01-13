@@ -4,14 +4,14 @@
     Licensed under CLOUD LINUX LICENSE AGREEMENT
     http://cloudlinux.com/docs/LICENSE.TXT
 -->
-<div class="cm-navbar">
+<div class="cm-navbar lll">
     <div class="left-aligned">
         <div *ngIf="!!logoTemplate" class="cl-logo-container">
             <ng-template [ngTemplateOutlet]="logoTemplate"></ng-template>
         </div>
-        <ul class="cm-navbar-menu">
+        <div class="cm-navbar-menu">
             <ng-template *ngFor="let template of leftTemplates" [ngTemplateOutlet]="template"></ng-template>
-        </ul>
+        </div>
     </div>
     <div class="right-aligned">
         <ng-template  *ngFor="let template of rightTemplates" [ngTemplateOutlet]="template"></ng-template>

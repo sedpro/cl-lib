@@ -9,14 +9,14 @@ import {
   ContentChildren,
   HostBinding,
   QueryList,
-  TemplateRef
+  TemplateRef,
 } from '@angular/core';
 import { ClTemplateDirective } from '../utils/template.directive';
 
 @Component({
   selector: 'cl-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.less']
+  styleUrls: ['./menu.component.less'],
 })
 export class MenuComponent {
   @HostBinding('attr.role') readonly role = 'navigation';
