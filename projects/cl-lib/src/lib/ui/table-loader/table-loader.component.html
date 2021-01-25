@@ -1,0 +1,13 @@
+<!--
+    Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+
+    Licensed under CLOUD LINUX LICENSE AGREEMENT
+    http://cloudlinux.com/docs/LICENSE.TXT
+-->
+<div class="skeleton-loader-row" *ngFor="let row of [].constructor(rows)">
+    <div class="skeleton-loader-cell" *ngFor="let col of [].constructor(cols)">
+        <ngx-skeleton-loader
+                animation="pulse"
+        ></ngx-skeleton-loader>
+    </div>
+</div>

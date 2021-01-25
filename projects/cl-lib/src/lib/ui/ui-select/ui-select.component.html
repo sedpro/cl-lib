@@ -1,0 +1,20 @@
+<!--
+    Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+
+    Licensed under CLOUD LINUX LICENSE AGREEMENT
+    http://cloudlinux.com/docs/LICENSE.TXT
+-->
+<div class="ui-select" (clickOutside)="close()">
+    <button class="ui-select__btn" (click)="toggle()">
+        <span>{{label}}</span>
+        <span class="selected-value" [class.hide-selected]="hideSelectedValue">{{selected}}</span>
+        <span class="ui-select__arrow" [class.open]="opened"></span>
+    </button>
+    <ul  class="ui-select__menu" [class.opened]="opened">
+        <li class="ui-select__menu-item"
+            *ngFor="let value of options"
+            [class.selected]="value === selected"
+            (click)="selectValue(value)"
+        >{{value}}</li>
+    </ul>
+</div>

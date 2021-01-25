@@ -1,0 +1,28 @@
+/**
+ * Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+ *
+ * Licensed under CLOUD LINUX LICENSE AGREEMENT
+ * http://cloudlinux.com/docs/LICENSE.TXT
+ */
+.skeleton-loader-row {
+    display: flex;
+    height: 50px;
+    width: 100%;
+}
+
+.skeleton-loader-cell {
+    display: block;
+    background: #f3f5f8;
+    width: 100%;
+    padding: 12px;
+}
+
+::ng-deep .skeleton-loader-row {
+    .loader {
+        background: white !important;
+        border-radius: unset !important;
+        display: flex;
+        height: 26px !important;
+        margin: 0 !important;
+    }
+}

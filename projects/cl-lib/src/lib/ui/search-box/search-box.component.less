@@ -1,0 +1,93 @@
+/**
+ * Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+ *
+ * Licensed under CLOUD LINUX LICENSE AGREEMENT
+ * http://cloudlinux.com/docs/LICENSE.TXT
+ */
+@import '../../assets/styles/shared.less';
+
+:host {
+    display: inline-block;
+}
+
+.search-box {
+    height: 40px;
+    min-width: 268px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.03);
+    background-color: @white0;
+    box-sizing: border-box;
+    padding: 6px 10px 6px 9px;
+    position: relative;
+
+    &__inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 100px;
+
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    &__find {
+        display: flex;
+        align-items: center;
+        pointer-events: none;
+        position: absolute;
+        margin-left: 3px;
+        flex-shrink: 0;
+        top: 0;
+        bottom: 0;
+        height: auto;
+
+        &:before {
+            content: '';
+            .search-blue-icon;
+            width: 20px;
+            height: 20px;
+            display: flex;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 12px;
+        bottom: 0;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0 12px 0 10px;
+        cursor: pointer;
+    }
+
+    &__close-icon {
+        .close-gray-icon(10px, 10px);
+    }
+
+    &__input {
+        border: none;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 12px;
+        color: @gray900;
+        padding: 0 20px 0 37px;
+        border-radius: 100px;
+        height: 28px;
+        line-height: 28px;
+
+        &--with-text {
+            margin-right: 0;
+        }
+        &:focus {
+            border-color: @blue120;
+        }
+        &::placeholder {
+            color: #868d9a;
+        }
+    }
+}

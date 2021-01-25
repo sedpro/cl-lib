@@ -1,0 +1,20 @@
+<!--
+    Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+
+    Licensed under CLOUD LINUX LICENSE AGREEMENT
+    http://cloudlinux.com/docs/LICENSE.TXT
+-->
+<div class="search-box">
+    <div class="search-box__find"></div>
+    <input class="search-box__input"
+           clnSanitizeInput
+           [placeholder]="placeholder"
+           [class.search-box__input--with-text]="!!searchText"
+           [(ngModel)]="searchText"
+           (ngModelChange)="onSearchTextChanged($event)">
+    <div *ngIf="!!searchText"
+         class="search-box__close"
+         (click)="onCloseClick()">
+        <div class="search-box__close-icon"></div>
+    </div>
+</div>

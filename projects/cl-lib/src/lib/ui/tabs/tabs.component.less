@@ -1,0 +1,40 @@
+/* Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+ *
+ * Licensed under CLOUD LINUX LICENSE AGREEMENT
+ * http://cloudlinux.com/docs/LICENSE.TXT
+ */
+
+@border-style: 1px solid #D8D8D8;
+
+:host {
+  display: block;
+  margin-bottom: 20px;
+  border-top: @border-style;
+  border-bottom: @border-style;
+}
+
+:host /deep/ a {
+  cursor: pointer;
+  font-family: "SF UI Display Regular", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  outline: none;
+  line-height: 40px;
+  padding: 3px 10px 0;
+
+  &.active {
+    color: #1B55C5;
+    background-color: transparent;
+    border-bottom: 3px solid #1B55C5;
+  }
+
+  &:hover, &:focus {
+    text-decoration: none;
+    color: blue;
+  }
+}
+
+::ng-deep a {
+  margin-right: 34px;
+}

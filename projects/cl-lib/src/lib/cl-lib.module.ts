@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 
 const components = [
   HeaderComponent,
-  ClTemplateDirective
+  ClTemplateDirective,
 ];
 
 @NgModule({

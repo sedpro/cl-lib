@@ -1,0 +1,93 @@
+/**
+ * Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+ *
+ * Licensed under CLOUD LINUX LICENSE AGREEMENT
+ * http://cloudlinux.com/docs/LICENSE.TXT
+ */
+@import '../../assets/styles/shared.less';
+
+.ui-select {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        border: none;
+        outline: none;
+        background: #fff;
+        border-radius: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 16px;
+        font-family: "SF UI Text", sans-serif;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        & .hide-selected {
+            display: none;
+        }
+
+        & .selected-value {
+            margin-left: 5px;
+        }
+    }
+    &__arrow {
+        margin-left: 10px;
+        .triangle(black, 8px, 5px);
+        position: relative;
+        transition: transform 0.2s;
+        transform: rotate(180deg);
+
+        &.open {
+            transform: rotate(0deg);
+        }
+    }
+    &__menu {
+        display: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: absolute;
+        min-width: 160px;
+        overflow: auto;
+        background: #ffffff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 2px;
+        z-index: 1;
+
+        &.opened {
+            display: inline-block;
+        }
+    }
+    &__menu-item {
+        height: 35px;
+        padding-left: 42px;
+        padding-right: 32px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        font-weight: normal;
+        line-height: 16px;
+        font-family: "SF UI Text", sans-serif;
+
+        &.selected {
+            background-image: url("data:image/svg+xml,%3Csvg width='15' height='12' viewBox='0 0 15 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.707 8.293L1.414 5L0 6.414L4.707 11.121L14.414 1.414L13 0L4.707 8.293Z' fill='%234E5665'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: 17px center;
+        }
+
+        &:hover {
+            background-color: @hoverColor;
+            cursor: pointer;
+        }
+    }
+}
+
