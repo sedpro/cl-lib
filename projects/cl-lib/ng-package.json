@@ -3,6 +3,9 @@
   "dest": "../../dist/cl-lib",
   "lib": {
     "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "ngx-skeleton-loader": "ngxSkeletonLoader"
+    },
     "cssUrl": "inline"
   },
   "assets": [

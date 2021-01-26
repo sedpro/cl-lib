@@ -1,0 +1,118 @@
+/**
+ * Copyright © Cloud Linux GmbH & Cloud Linux Software, Inc 2010-2020 All Rights Reserved
+ *
+ * Licensed under CLOUD LINUX LICENSE AGREEMENT
+ * http://cloudlinux.com/docs/LICENSE.TXT
+ */
+
+.mat-table {
+    min-width: 1361px;
+    margin-bottom: 20px;
+
+    & mat-cell, & .cell-content-wrapper {
+        min-height: 48px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        & .mat-progress-bar {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    & .mat-row.has-data {
+        cursor: pointer;
+    }
+}
+
+.table-header {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    font-family: "SF UI Text", sans-serif;
+}
+
+.table-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 42px;
+    margin-bottom: 22px;
+}
+
+.mat-header-row,
+.mat-header-cell {
+    min-height: 50px;
+    background: #f7f8fb;
+}
+
+.mat-row {
+    min-height: 50px;
+    &.accent-row {
+        background: #fff4ec;
+    }
+    &.danger-row {
+        background: #f9eaed;
+    }
+    &.success-row {
+        background: #d9ffde;
+    }
+}
+
+.mat-cell {
+    font-size: 13px !important;
+    line-height: 16px !important;
+    margin-right: 5px;
+
+    &.accent-cell {
+        color: #ffa25f;
+    }
+    &.danger-cell {
+        color: #ff1818;
+    }
+}
+
+.mat-header-cell {
+    margin-right: 5px;
+}
+
+// Reset material default sorting arrow
+.mat-sort-header-arrow[style] {
+
+    .mat-sort-header-stem {
+        display: none;
+    }
+
+    .mat-sort-header-indicator {
+        opacity: 1;
+        color: black;
+        font-weight: bold;
+
+        .mat-sort-header-pointer-left, .mat-sort-header-pointer-right, .mat-sort-header-pointer-middle  {
+            display: none;
+        }
+    }
+}
+
+.mat-column-select {
+    flex: 0 0 50px !important;
+}
+
+[aria-sort="ascending"] span.custom-sort-arrow,
+[aria-sort="descending"] span.custom-sort-arrow {
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+
+[aria-sort="ascending"] span.custom-sort-arrow {
+    border-bottom: 5px solid #000000;
+    margin-left: 5px;
+}
+
+[aria-sort="descending"] span.custom-sort-arrow {
+    border-top: 5px solid #000000;
+    margin-left: 5px;
+}
