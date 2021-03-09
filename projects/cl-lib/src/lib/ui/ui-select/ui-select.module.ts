@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { UiSelectComponent } from './ui-select.component';
 import { MaterialModule } from '../../shared/material.module';
 import { DirectivesModule } from '../../directives/directives.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { DirectivesModule } from '../../directives/directives.module';
         MaterialModule,
         CommonModule,
         DirectivesModule,
+        PipesModule,
     ],
     declarations: [UiSelectComponent],
     exports: [UiSelectComponent],

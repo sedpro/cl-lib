@@ -12,9 +12,9 @@
     </button>
     <ul  class="ui-select__menu" [class.opened]="opened">
         <li class="ui-select__menu-item"
-            *ngFor="let value of options"
-            [class.selected]="value === selected"
-            (click)="selectValue(value)"
-        >{{value}}</li>
+            *ngFor="let item of formattedOptions|keys"
+            [class.selected]="item.value === selected"
+            (click)="selectValue(item.key)"
+        >{{item.value}}</li>
     </ul>
 </div>

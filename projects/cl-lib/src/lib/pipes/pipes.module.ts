@@ -7,9 +7,11 @@
 import { NgModule } from '@angular/core';
 
 import { ToNumberPipe } from './toNumber.pipe';
+import { KeysPipe } from './keys';
 
 const PIPES = [
     ToNumberPipe,
+    KeysPipe,
 ];
 
 @NgModule({

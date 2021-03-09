@@ -13,8 +13,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class UiSelectComponent {
     opened = false;
+    formattedOptions: object = {};
 
-    @Input() options = [];
+    @Input() set options(value) {
+        if (typeof(this.options) === 'object') {
+            this.formattedOptions = value;
+        } else {
+            value.forEach(i => this.formattedOptions[i] = i);
+        }
+    }
     @Input() selected = '';
     @Input() label = '';
     @Input() hideSelectedValue = false;

@@ -10,7 +10,7 @@ export * from './lib/services/app-state.service';
 export * from './lib/services/xhr';
 
 export * from './lib/cl-lib.module';
-export * from './lib/pipes/index';
+export * from './lib/pipes/pipes.module';
 export * from './lib/ui/menu/menu.module';
 
 export * from './lib/directives/directives.module';
